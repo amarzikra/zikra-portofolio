@@ -104,7 +104,6 @@ export function About() {
                           alt=""
                           width={40}
                           height={40}
-                          unoptimized
                           className={cn(
                             'size-7 shrink-0 sm:size-8 md:size-9 lg:size-10',
                             item.invertOnDark && 'dark:invert',

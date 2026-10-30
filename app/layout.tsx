@@ -6,6 +6,7 @@ import './globals.css'
 
 const geist = Geist({ subsets: ['latin'], variable: '--font-geist' })
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
+const assetBase = (process.env.NEXT_PUBLIC_BASE_PATH || '').replace(/\/$/, '')
 
 export const metadata: Metadata = {
   title: 'DevByZikraa — Software Engineer',
@@ -14,11 +15,11 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   icons: {
     icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: `${assetBase}/icon-light-32x32.png`, media: '(prefers-color-scheme: light)' },
+      { url: `${assetBase}/icon-dark-32x32.png`, media: '(prefers-color-scheme: dark)' },
+      { url: `${assetBase}/icon.svg`, type: 'image/svg+xml' },
     ],
-    apple: '/apple-icon.png',
+    apple: `${assetBase}/apple-icon.png`,
   },
 }
 
@@ -49,7 +50,7 @@ export default function RootLayout({
         />
         <SmoothScroll />
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === 'production' && process.env.GITHUB_PAGES !== 'true' && <Analytics />}
       </body>
     </html>
   )
