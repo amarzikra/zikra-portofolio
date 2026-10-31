@@ -38,6 +38,6 @@ export const navItems = [
   { label: 'Expertise', href: '#expertise' },
   { label: 'About', href: '#about' },
   { label: 'Selected Work', href: '#work' },
-  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Credentials', href: '#credentials' },
   { label: 'Contact', href: '#contact' },
 ]

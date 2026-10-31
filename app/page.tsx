@@ -1,13 +1,13 @@
 import { About } from '@/components/portfolio/about'
 import { Achievements } from '@/components/portfolio/achievements'
 import { Contact } from '@/components/portfolio/contact'
+import { Credentials } from '@/components/portfolio/credentials'
 import { Expertise } from '@/components/portfolio/expertise'
 import { Hero } from '@/components/portfolio/hero'
 import { Principles } from '@/components/portfolio/principles'
 import { Projects } from '@/components/portfolio/projects'
 import { SiteFooter } from '@/components/portfolio/site-footer'
 import { SiteNav } from '@/components/portfolio/site-nav'
-import { Testimonials } from '@/components/portfolio/testimonials'
 
 export default function Home() {
   return (
@@ -26,7 +26,7 @@ export default function Home() {
         <Projects />
         <Principles />
         <Achievements />
-        <Testimonials />
+        <Credentials />
         <Contact />
       </main>
       <SiteFooter />
